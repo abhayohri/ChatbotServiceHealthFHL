@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "ChatbotServiceHealthFHL": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 31682,
+      "useSSL": false
+    }
+  }
+}
