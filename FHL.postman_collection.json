@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "c9a31a2c-7eb3-4373-8b54-c8b316b4ac1a",
+		"name": "FHL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20898201"
+	},
+	"item": [
+		{
+			"name": "InstructGPT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:31682/api/Chatbot?type=question&question= I can't access my vm is there an outage?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "31682",
+					"path": [
+						"api",
+						"Chatbot"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "question"
+						},
+						{
+							"key": "question",
+							"value": " I can't access my vm is there an outage?"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "custom endpoint",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:31682/api/Chatbot?type=question&question=The%20user%20says%20I%20can%27t%20access%20my%20VM%20is%20there%20an%20outage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "31682",
+							"path": [
+								"api",
+								"Chatbot"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "question"
+								},
+								{
+									"key": "question",
+									"value": "The%20user%20says%20I%20can%27t%20access%20my%20VM%20is%20there%20an%20outage"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Dec 2022 18:59:11 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access my VM is there an outage?\n\nThe user says I can't access"
+				}
+			]
+		},
+		{
+			"name": "InstructGPT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\": \"question\", \"question\": \"what is a monkey\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:31682/api/Chatbot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "31682",
+					"path": [
+						"api",
+						"Chatbot"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "custom endpoint",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\": \"question\", \"question\": \"what is a monkey\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:31682/api/Chatbot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "31682",
+							"path": [
+								"api",
+								"Chatbot"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Dec 2022 19:16:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": " wrench?”\n\n“A monkey wrench is a tool used to tighten or loosen nuts and bolts.”\n\n“What is a wrench?”\n\n“A wrench is a tool used to tighten or loosen nuts and bolts.”\n\n“What is a nut?”\n\n“A nut is a round object that is used to hold two pieces of metal together.”\n\n“What is a bolt?”\n\n“A bolt is a long, thin object that is used to hold two pieces of metal together.”\n\n“What is a screwdriver?”\n\n“A screwdriver is a tool used to tighten or loosen screws.”\n\n“What is a screw?”\n\n“A screw is a small, round object that is used to hold two pieces of metal together.”\n\n“What is a wrench?”\n\n“A wrench is a tool used to tighten or loosen nuts and bolts.”\n\n“What is a nut?”\n\n“A nut is a round object that is used to hold"
+				}
+			]
+		},
+		{
+			"name": "ChatGPT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:31682/api/Chatbot?type=question&question=The%20user%20says%20I%20can%27t%20access%20my%20VM%20is%20there%20an%20outage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "31682",
+					"path": [
+						"api",
+						"Chatbot"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "question"
+						},
+						{
+							"key": "question",
+							"value": "The%20user%20says%20I%20can%27t%20access%20my%20VM%20is%20there%20an%20outage"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "custom endpointV2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Chatbot?type=question&question=I don't see my affected resource is there an outage? can you give me an arg query?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Chatbot"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "question"
+								},
+								{
+									"key": "question",
+									"value": "I don't see my affected resource is there an outage? can you give me an arg query?"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"conversation_id\": \"57030f84-4d43-4dec-bc11-c23ac9a62427\",\r\n    \"message\": \"To check if there is an outage affecting the user's resource, the user can try the following steps:\\n\\n1. Open the Azure portal and navigate to the Service Health blade.\\n\\n2. In the Service Health blade, select the 'Service Issues' tab to see a list of known outages and service disruptions.\\n\\n3. If there are no known outages or service disruptions listed, the user can try using the Azure Resource Graph (ARG) query provided in the previous solution to search for any active service health events that might be impacting their subscriptions. The query is:\\n\\nServiceHealthResources\\n| where type =~ 'Microsoft.ResourceHealth/events'\\n| extend eventType = tostring(properties.EventType), status = properties.Status, description = properties.Title, trackingId = properties.TrackingId, summary = properties.Summary, priority = properties.Priority, impactStartTime = properties.ImpactStartTime, impactMitigationTime = todatetime(tolong(properties.ImpactMitigationTime))\\n| where properties.Status == 'Active' and tolong(impactStartTime) > 1\\n| summarize count(subscriptionId) by name, eventType\\n\\nThis query searches for active service health events that might be impacting the user's subscriptions. It provides information about the event type, status, description, tracking ID, summary, priority, impact start time, and impact mitigation time. This can help the user identify any outages or other disruptions that might be affecting their resource.\\n\\n4. If the user still does not see their affected resource and cannot find any relevant service health events, they can contact Azure support for further assistance.\",\r\n    \"parent_id\": \"1901efe9-380e-4e99-a369-7c2862cbcf9b\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "ChatGPT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\": \"question\", \"question\": \"what is a monkey\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:31682/api/Chatbot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "31682",
+					"path": [
+						"api",
+						"Chatbot"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "custom endpointV2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Chatbot?type=question&question=I don't see my affected resource is there an outage? can you give me an arg query?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Chatbot"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "question"
+								},
+								{
+									"key": "question",
+									"value": "I don't see my affected resource is there an outage? can you give me an arg query?"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"conversation_id\": \"57030f84-4d43-4dec-bc11-c23ac9a62427\",\r\n    \"message\": \"To check if there is an outage affecting the user's resource, the user can try the following steps:\\n\\n1. Open the Azure portal and navigate to the Service Health blade.\\n\\n2. In the Service Health blade, select the 'Service Issues' tab to see a list of known outages and service disruptions.\\n\\n3. If there are no known outages or service disruptions listed, the user can try using the Azure Resource Graph (ARG) query provided in the previous solution to search for any active service health events that might be impacting their subscriptions. The query is:\\n\\nServiceHealthResources\\n| where type =~ 'Microsoft.ResourceHealth/events'\\n| extend eventType = tostring(properties.EventType), status = properties.Status, description = properties.Title, trackingId = properties.TrackingId, summary = properties.Summary, priority = properties.Priority, impactStartTime = properties.ImpactStartTime, impactMitigationTime = todatetime(tolong(properties.ImpactMitigationTime))\\n| where properties.Status == 'Active' and tolong(impactStartTime) > 1\\n| summarize count(subscriptionId) by name, eventType\\n\\nThis query searches for active service health events that might be impacting the user's subscriptions. It provides information about the event type, status, description, tracking ID, summary, priority, impact start time, and impact mitigation time. This can help the user identify any outages or other disruptions that might be affecting their resource.\\n\\n4. If the user still does not see their affected resource and cannot find any relevant service health events, they can contact Azure support for further assistance.\",\r\n    \"parent_id\": \"1901efe9-380e-4e99-a369-7c2862cbcf9b\"\r\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "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",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
