@@ -9,6 +9,7 @@ please use steps from https://github.com/acheong08/ChatGPT/wiki/Setup to setup c
 
 ## to use chat GPT:
 
+from ChatGPT folder
 run py ChatGPT/src/revChatGPT/program.py
 
 ## to use instructGPT
