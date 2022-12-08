@@ -16,7 +16,7 @@ run py src/revChatGPT/program.py
 
 use the postman collection to make queries
 
-## to use instructGPT
+## instructGPT
 
 open solution in visual studio and run 
 
