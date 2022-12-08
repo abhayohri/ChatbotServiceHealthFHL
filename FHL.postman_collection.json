@@ -265,10 +265,25 @@
 				{
 					"name": "custom endpointV2",
 					"originalRequest": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "question",
+									"value": "I don't see my affected resource is there an outage? can you give me an arg query?",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:5000/api/Chatbot?type=question&question=I don't see my affected resource is there an outage? can you give me an arg query?",
+							"raw": "http://localhost:5000/api/Chatbot",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -277,38 +292,107 @@
 							"path": [
 								"api",
 								"Chatbot"
-							],
-							"query": [
-								{
-									"key": "type",
-									"value": "question"
-								},
-								{
-									"key": "question",
-									"value": "I don't see my affected resource is there an outage? can you give me an arg query?"
-								}
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 08 Dec 2022 19:32:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1296"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
 					"cookie": [],
-					"body": "{\r\n    \"conversation_id\": \"57030f84-4d43-4dec-bc11-c23ac9a62427\",\r\n    \"message\": \"To check if there is an outage affecting the user's resource, the user can try the following steps:\\n\\n1. Open the Azure portal and navigate to the Service Health blade.\\n\\n2. In the Service Health blade, select the 'Service Issues' tab to see a list of known outages and service disruptions.\\n\\n3. If there are no known outages or service disruptions listed, the user can try using the Azure Resource Graph (ARG) query provided in the previous solution to search for any active service health events that might be impacting their subscriptions. The query is:\\n\\nServiceHealthResources\\n| where type =~ 'Microsoft.ResourceHealth/events'\\n| extend eventType = tostring(properties.EventType), status = properties.Status, description = properties.Title, trackingId = properties.TrackingId, summary = properties.Summary, priority = properties.Priority, impactStartTime = properties.ImpactStartTime, impactMitigationTime = todatetime(tolong(properties.ImpactMitigationTime))\\n| where properties.Status == 'Active' and tolong(impactStartTime) > 1\\n| summarize count(subscriptionId) by name, eventType\\n\\nThis query searches for active service health events that might be impacting the user's subscriptions. It provides information about the event type, status, description, tracking ID, summary, priority, impact start time, and impact mitigation time. This can help the user identify any outages or other disruptions that might be affecting their resource.\\n\\n4. If the user still does not see their affected resource and cannot find any relevant service health events, they can contact Azure support for further assistance.\",\r\n    \"parent_id\": \"1901efe9-380e-4e99-a369-7c2862cbcf9b\"\r\n}"
+					"body": "{\n    \"conversation_id\": \"4ce282f3-328f-4424-9b28-abdf478c5074\",\n    \"message\": \"To find out if your Azure resource is experiencing an outage, you can use the Azure Resource Graph query provided in Solution 1. This query will show any service health events that are impacting your Azure subscriptions. Here is the query again:\\n\\nServiceHealthResources\\n| where type =~ 'Microsoft.ResourceHealth/events'\\n| extend eventType = tostring(properties.EventType), status = properties.Status, description = properties.Title, trackingId = properties.TrackingId, summary = properties.Summary, priority = properties.Priority, impactStartTime = properties.ImpactStartTime, impactMitigationTime = todatetime(tolong(properties.ImpactMitigationTime))\\n| where properties.Status == 'Active' and tolong(impactStartTime) > 1\\n| summarize count(subscriptionId) by name, eventType\\n\\nTo run this query, you can use the Azure Cloud Shell or the Azure Portal. The query will return a list of service health events that are currently impacting your subscriptions, along with the event type, status, description, tracking ID, summary, priority, impact start time, and impact mitigation time. This will help you determine if your affected resource is experiencing an outage.\\n\\n\",\n    \"parent_id\": \"be58ee2b-abba-4704-a75d-c0a28a97a20e\"\n}"
+				},
+				{
+					"name": "ChatGPT Copy 2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "question",
+									"value": "I cannot acces my VM is there an outage? can you provide an ARG query",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Chatbot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Chatbot"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 08 Dec 2022 19:50:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1239"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"conversation_id\": \"dbdd23bb-756e-49cf-b251-879458b61fc3\",\n    \"message\": \"To check for active events that might be impacting your subscriptions, you can use the following Azure Resource Graph query:\\n\\nServiceHealthResources\\n| where type =~ 'Microsoft.ResourceHealth/events'\\n| extend eventType = tostring(properties.EventType), status = properties.Status, description = properties.Title, trackingId = properties.TrackingId, summary = properties.Summary, priority = properties.Priority, impactStartTime = properties.ImpactStartTime, impactMitigationTime = todatetime(tolong(properties.ImpactMitigationTime))\\n| where properties.Status == 'Active' and tolong(impactStartTime) > 1\\n| summarize count(subscriptionId) by name, eventType\\n\\nThis query will return a list of active events and their associated event types, which can help you determine whether an outage is affecting your ability to access your VM. If the query does not return any results, it is possible that there was an outage that has already been resolved, or that there is an outage that has not yet been posted. In either case, you can check the Azure Service Health page on the Azure status website for more information.\",\n    \"parent_id\": \"af04ed57-908c-4173-b2c1-36f20bf41931\"\n}"
 				}
 			]
 		}
 	],
 	"auth": {
-		"type": "apikey",
-		"apikey": [
+		"type": "bearer",
+		"bearer": [
 			{
-				"key": "key",
+				"key": "token",
 				"value": "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",
-				"type": "string"
-			},
-			{
-				"key": "value",
-				"value": "Authorization",
 				"type": "string"
 			}
 		]
